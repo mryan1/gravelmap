@@ -10,7 +10,11 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.18.1"
+    "@tmcw/togeojson": "^4.7.0",
+    "@types/geojson": "^7946.0.8",
+    "@xmldom/xmldom": "^0.8.2",
+    "express": "^4.18.1",
+    "xmldom": "^0.6.0"
   },
   "engines": {
     "node": "12.x"

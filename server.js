@@ -10,7 +10,6 @@ const path = require("path");
 const app = express();
 const convertGPX = require("./processgpx")
 
-
 // make all the files in 'public' available
 // https://expressjs.com/en/starter/static-files.html
 app.use(express.static("public"));

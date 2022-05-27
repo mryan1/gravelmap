@@ -21,7 +21,21 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
+function onEachFeature(feature, layer) {
+    // does this feature have a property named popupContent?
+    if (feature.properties && feature.properties.popupContent) {
+        layer.bindPopup(feature.properties.popupContent);
+    }
+}
+
 //TODO: add error handling 
+//TODO: Show details when trail is clicked
 fetch("/trails")
   .then(response => response.json())
-  .then(trails => L.geoJSON(trails).addTo(map))
+  .then(trails => L.geoJSON(trails, {
+    onEachFeature: onEachFeature
+  }).addTo(map))
+
+console.log("Trails:")
+console.log(L)
+//L.geoJSON().getFeature()

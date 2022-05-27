@@ -5,7 +5,7 @@
 const fs = require("fs");
 const { google } = require("googleapis");
 require("dotenv").config();
-const gpx = require("./processgpx");
+//const gpx = require("./processgpx");
 const https = require("https");
 const { v4: uuidv4 } = require("uuid");
 
@@ -17,11 +17,18 @@ const params = {
 const getRouteGPX = (uri, uuid) => {
   //determine if route is ridewithgps, strava route, or strava activity and fetch accordingly
   if (uri.includes("ridewithgps.com/routes")) {
-    console.log("Route link:" + uri.substring(uri.indexOf('?'), uri.length) + ".gpx?sub_format=track");
+    if(uri.includes("?")){
+      const sanURI = uri.substring(0, uri.indexOf('?') -1) + ".gpx?sub_format=track"
+    }
+    else{
+      sanURI = uri + ".gpx?sub_format=track"
+    }
+    console.log(sanURI)
+    //console.log("Route link:" + uri.substring(0, uri.indexOf('?') -1) + ".gpx?sub_format=track");
     //https://ridewithgps.com/routes/35088794.gpx?sub_format=track
     //https://ridewithgps.com/routes/35088794
     //Route link:https://ridewithgps.com/routes/38516268?fbclid=IwAR22xU5TSXcdCsHWMhV0Vktx73uP8FFvP3rSIHN20Ku7KsNT-RLA43AfVNA.gpx?sub_format=track
-    https.get(uri + ".gpx?sub_format=track", (res) => {
+    https.get(sanURI, (res) => {
       // Image will be stored at this path
       const path = "./gpx/" + uuid + ".gpx";
       const filePath = fs.createWriteStream(path);

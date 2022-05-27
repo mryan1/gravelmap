@@ -1,5 +1,4 @@
 [
-
   {
     "name": "WRAAC Dutch Treat",
     "location": "Chestermere",
@@ -10,7 +9,7 @@
     "routelink": "https://ridewithgps.com/routes/35088794",
     "amenities": "No",
     "comments": "Pancake flat loop with canal double track and some gravel. Beginner friendly. ",
-    "guid": "c40b4a99-771a-4ce9-95ec-b168ebf57aae"
+    "guid": "414fe329-a43a-415b-abce-78cc463d45c9"
   },
   {
     "name": "WRAAC Ware Ridge Loop",
@@ -22,7 +21,7 @@
     "routelink": "https://ridewithgps.com/routes/35132316",
     "amenities": "Yes (Turner Valley)",
     "comments": "A classic loop between Millarville and Turner Valley. Very beginner friendly.",
-    "guid": "4d9a86ba-dd9f-4566-b296-463a7a6a47c9"
+    "guid": "f396b80e-1868-43c2-bfc6-4befe7617e13"
   },
   {
     "name": "99 Problems but Gravel Ain't One",
@@ -34,9 +33,20 @@
     "routelink": "https://ridewithgps.com/routes/31107521",
     "amenities": "Yes (Madden Golf Course)",
     "comments": "Great loop with high percentage gravel starting at Big Hill Springs. Golf course food/drinks just past the halfway point. Give the farm track roads a few days to dry after rain. Pretty beginner friendly with relatively easy climbs.",
-    "guid": "b0d13b8b-3013-401c-863d-7076ee9d905f"
+    "guid": "fff0ea85-6c25-4456-94ee-10b303c8a502"
   },
-
+  {
+    "name": "South Calgary Gravel / Backroads Loop",
+    "location": "Calgary SW",
+    "distance": "47",
+    "elevation": "740",
+    "difficulty": "3",
+    "author": "Niels van Ommeren",
+    "routelink": "https://www.strava.com/routes/26804431",
+    "amenities": "No",
+    "comments": "A shorter loop connecting some great gravel and back roads, starting near Granary Road. Excellent beginner loop with some challenging climbs up to 10%",
+    "guid": "5068f41d-06c0-4de6-993e-a6a282c89969"
+  },
   {
     "name": "Tour de Rosebud Stubby Edition",
     "location": "Rosebud",
@@ -47,7 +57,7 @@
     "routelink": "https://www.strava.com/routes/2868294599687036096",
     "amenities": "No",
     "comments": "Inspired by the Hurt'n Albert'n route, this loop goes through the valley three times. Great views. 3 tough climbs. County likes to grade frequently.  No amenities. Ride clockwise if you want to front-load the climbs.",
-    "guid": "8b704ec4-1f84-40f3-80ba-8d18371e4b09"
+    "guid": "c28321a2-a6e8-4302-9547-ec2ff0b17200"
   },
   {
     "name": "McLean - Coalmine Loop",
@@ -59,7 +69,7 @@
     "routelink": "https://www.strava.com/routes/2876195504976934920",
     "amenities": "Yes (Millarville)",
     "comments": "McLean creek and Coalmine road connected together. Save some energy for northbound Coalmine road.",
-    "guid": "475d3cac-5f5c-4d6b-ba24-7bbbc16e101a"
+    "guid": "8f043099-8c1a-40c3-ab65-dbc32ec851ae"
   },
   {
     "name": "WRAAC Gorge Creek Loop",
@@ -71,7 +81,7 @@
     "routelink": "https://ridewithgps.com/routes/35088643",
     "amenities": "No",
     "comments": "Beautiful remote Gorge Creek, looped together with part of Ware Ridge. Bring your climbing gears. Approximately 84km if starting from Millarville with 1100m elevation.",
-    "guid": "3591e119-69a6-40f3-9ca6-77d09a4847e9"
+    "guid": "2573b7f3-b382-499b-88f9-867770fb5cee"
   },
   {
     "name": "Bragg Creek - Powderface Loop",
@@ -83,7 +93,7 @@
     "routelink": "https://www.strava.com/routes/2876206025500962422",
     "amenities": "No",
     "comments": "Mixed surface loop with a mostly downhill paved stretch back into Bragg Creek. 50/50 paved/dirt with nice views.",
-    "guid": "5b943fa7-2b4d-406f-9c4f-0f6e55c8b0a8"
+    "guid": "7cb1c414-e2a0-4175-a1c0-c66a46269da8"
   },
   {
     "name": "Turner Valley Figure 8ish Gravel and Backroads",
@@ -95,7 +105,7 @@
     "routelink": "https://www.strava.com/routes/2876208008938232840",
     "amenities": "Yes (Turner Valley, Longview, Millarville)",
     "comments": "Surprisingly tough but scenic figure 8 with plenty of refuelling stops. \"Trespass\" section just east of Longview, so ride at your own risk.",
-    "guid": "235b032c-ce55-4217-871e-12ccc7aa0ef3"
+    "guid": "df0a299e-7437-4094-8752-86715740254c"
   },
   {
     "name": "Nanton 80K Gravel Speciale",
@@ -107,7 +117,7 @@
     "routelink": "https://www.strava.com/routes/2868712927287590986",
     "amenities": "No",
     "comments": "80km loop out of Nanton of nearly all gravel. Amazing views. Very steep climbs. Fast descents. Some of the best the area has to offer. No Amenities. Post ride Dairy Queen blizzards.",
-    "guid": "343b5ead-b67c-4e2c-b5eb-6dc5d5e15953"
+    "guid": "bc6b0ee1-aa0a-459a-abdf-0d09ec1aacd6"
   },
   {
     "name": "Extrabigly Motoburrito Ride",
@@ -119,7 +129,7 @@
     "routelink": "https://www.strava.com/routes/2862762333536780468",
     "amenities": "Yes (Millarville, Turner Valley)",
     "comments": "The fun way to ride to Turner Valley/Motoburrito! Plenty of climbing and great views of the Turner Valley area. Some of the best gravel and back roads in the area. Long climbs, punchy steep short climbs, farm track. ",
-    "guid": "fd9bda03-240b-4811-bc35-bc15348176a6"
+    "guid": "028da26b-8346-43ee-b778-c0d98057dcd6"
   },
   {
     "name": "Ghost of the Gravel",
@@ -131,7 +141,7 @@
     "routelink": "https://www.strava.com/routes/2709249907293481530",
     "amenities": "No",
     "comments": "The Ghost of the Gravel race route. Usually fast gravel and very little pavement. Many punchy climbs in the second half makes this a tough race course.",
-    "guid": "b7174ad6-6db9-4bac-9810-85714e6a07c6"
+    "guid": "e95ebb17-8379-4f7e-867c-4722ba942ce9"
   },
   {
     "name": "Priddis/Turner Valley Gravel and Backroads Century",
@@ -143,7 +153,7 @@
     "routelink": "https://www.strava.com/routes/2822858471841525838",
     "amenities": "Yes (Millarville, Turner Valley)",
     "comments": "Mixed surface ride connecting a lot of the great gravel and paved roads between Priddis / Turner Valley / Calgary. Various options for shortcuts and water/food. ",
-    "guid": "dce1aebd-0c36-4af3-83f7-71e663d36b1c"
+    "guid": "c1e629b8-55bb-4bf7-a9bf-c0c53d62e0d4"
   },
   {
     "name": "Powderface - Barrier Lake - Little Elbow Loop",
@@ -155,7 +165,7 @@
     "routelink": "https://www.strava.com/routes/2876203843521997832",
     "amenities": "Yes - Kananaskis Village & Boulton Creek Campground",
     "comments": "Tough loop best done with 40+mm tubeless tires and climbing gears. High elevation means this is better done later in the season. Remote and beautiful.",
-    "guid": "fffbfbc6-c805-414c-8d03-fa7a00d0662b"
+    "guid": "067aa49f-0c57-4014-b25e-c3ad4a3bd6c1"
   },
   {
     "name": "Nanton - Crowsnest Overnighter Loop",
@@ -167,7 +177,7 @@
     "routelink": "https://www.strava.com/routes/2874037769322485028",
     "amenities": "Yes",
     "comments": "More of a bikepacking/fastpacking loop. Bring a water filter and bear spray. Plenty of elevation. High percentage gravel. Long stretches with no food/cell service. Hwy40 best traveled on weekdays.",
-    "guid": "39e88fca-0e9e-4523-9b88-32348d4272dc"
+    "guid": "ffeabc90-6937-4309-ae8c-60347668de0f"
   },
   {
     "name": "Markerville Ice Cream Loop",
@@ -179,7 +189,7 @@
     "routelink": "https://ridewithgps.com/routes/36856004",
     "amenities": "Yes, Markerville Creamery, Eckville gas station",
     "comments": "The NW and SE legs are very nice, but the gravel varies a lot so you need to keep on your toes. This routing goes all the way north to Eckville to stop at the GTI gas stations for replenishments and bathroom break. It's possible to cut this out by heading east on Hwy 11 and going straight to Benalto. In Benalto there is the Caravelle Cafe, which is currently (July 25th) undergoing renovations, but should be opened early-to-mid September.",
-    "guid": "ec3c39df-6790-49ba-ab64-f0c73172f25c"
+    "guid": "e2ccf174-f7dc-4dcf-baf1-1a5c91626094"
   },
   {
     "name": "Lochend Ponds Loop",
@@ -191,7 +201,7 @@
     "routelink": "https://ridewithgps.com/routes/33905820",
     "amenities": "No",
     "comments": "Gravel ride on quiet roads, with only 1.5km of pavement. Brown sections are clay surface and may be impassable when wet.",
-    "guid": "421649cd-0a1a-49fc-a023-e4105477318b"
+    "guid": "f414db1d-4cc8-48a2-9d21-ae20a5045d6a"
   },
   {
     "name": "Indus - Carseland Gravel Loop",
@@ -202,7 +212,7 @@
     "author": "Richard Fallen",
     "routelink": "https://ridewithgps.com/routes/36201693",
     "amenities": "Carseland General Store, Langdon",
-    "guid": "49f385b0-040e-420a-ab3f-fe66883eafd6"
+    "guid": "efb38067-193e-4711-9d29-e1aad5d02260"
   },
   {
     "name": "Old Porcupine's Choice Bikepack Route",
@@ -214,7 +224,7 @@
     "routelink": "https://ridewithgps.com/routes/29142524",
     "amenities": "No",
     "comments": "Multi-surface bikepacking loop that takes you from ranchlands into the Rockies and back again. Only 33kms of the loop is pavements.",
-    "guid": "52f76e29-7779-4e5a-89b9-16e99fb3b721"
+    "guid": "234f5c6a-5b4f-439b-b7e3-db21f4608cf9"
   },
   {
     "name": "Tuner Valley Short",
@@ -226,7 +236,7 @@
     "routelink": "https://ridewithgps.com/trips/74978136",
     "amenities": "Yes, Turner Valley",
     "comments": "TBD",
-    "guid": "d64c2ccf-ece0-4a28-9f40-f952652d7176"
+    "guid": "7615f292-0656-4fd5-8553-12951411aae0"
   },
   {
     "name": "Drumheller 100km",
@@ -238,7 +248,7 @@
     "routelink": "https://www.strava.com/activities/5900203861",
     "amenities": "Yes, Drumheller",
     "comments": "It's 100km for the whole thing. Or, you can cut off the extension up to Gartly and head back on HWY 56 or 576 for 50km or 60km loops respectively. Or, you can do the Gartly portion and cut off the the Tyrell Museum loop and head back on HWY 56 for an 80km loop",
-    "guid": "b4ea4c2e-02f8-4762-a865-cc558d4fcb50"
+    "guid": "9c3310c7-0e28-4349-8f16-82d05e4ce736"
   },
   {
     "name": "Drumheller Gravel Ripper",
@@ -250,7 +260,7 @@
     "routelink": "https://ridewithgps.com/routes/35907458",
     "amenities": "Yes, Drumheller",
     "comments": "Great route, some steep climbs and a rough one to start out of Nacmine, lots of variety",
-    "guid": "56a597ac-d9fe-40f2-b010-c74ea9ae7acc"
+    "guid": "ca3d193a-c349-4eb5-807d-97c781d38d37"
   },
   {
     "name": "Airdrie Gravel Speciale",
@@ -262,7 +272,7 @@
     "routelink": "https://www.strava.com/activities/5873660874",
     "amenities": "No",
     "comments": "Fun mixed surface route, dirt and gravel and pavement and....",
-    "guid": "8c2f1dc3-5f2b-4902-9a7e-d8cc65e10c4a"
+    "guid": "2021c61f-22b7-4428-8191-df1297a19f65"
   },
   {
     "name": "Airdrie Range Road Loop",
@@ -274,7 +284,7 @@
     "routelink": "https://www.strava.com/activities/5728012228",
     "amenities": "No",
     "comments": "A bit of everything including \"range roads\" through farm fields and more",
-    "guid": "da7ed01b-d6f3-4d40-a544-d5384eeb5e2c"
+    "guid": "869b9c9c-6805-410d-b820-c9d73699c251"
   },
   {
     "name": "Airdrie Gravel Shorty",
@@ -286,7 +296,7 @@
     "routelink": "https://www.strava.com/activities/5519713317",
     "amenities": "No",
     "comments": "Simple loop exploring some of the township / range roads east of Airdrie",
-    "guid": "aecff7b4-aef9-4ea0-b32d-0234dbe4d91d"
+    "guid": "ec9abcde-6a3d-460d-a8b1-bc8056093a8f"
   },
   {
     "name": "Frank Lake Loop",
@@ -298,7 +308,7 @@
     "routelink": "https://www.strava.com/activities/5723378010",
     "amenities": "No",
     "comments": "Some super fun hard packed dirt trail round the lake which is actually a wetland conservation area) and a whole mixture of different gravel and thicknesses on the route as a whole",
-    "guid": "88cee146-0175-4f2b-802f-54f0167954b0"
+    "guid": "1f30b989-7ce5-4afb-921f-e29e150df20d"
   },
   {
     "name": "Plateau Mountain Road",
@@ -310,7 +320,7 @@
     "routelink": "https://ridewithgps.com/routes/32007786",
     "amenities": "No",
     "comments": "Amazing climb. Unlike Anything else around here.￼Did it as a gravel everesting recon; would be a great Climb for it, but a couple of the downhill sections would be sketchy if you tired and are hand burners. 20 repeats would be an Everest. Definitely worth trying the route. ￼￼￼",
-    "guid": "11a4710b-49e1-4b5e-a6b5-fe29ad24c512"
+    "guid": "7e996b9d-1909-4b5b-96f5-bb42b2786b36"
   },
   {
     "name": "WRAAC Dutch Dinner",
@@ -322,7 +332,7 @@
     "routelink": "https://ridewithgps.com/routes/36351657",
     "amenities": "No",
     "comments": "If you like the WRAAC Dutch Treat route, this is similar but longer. Canals and quiet farm roads with a bonus viewpoint overlooking the Bow River at around the halfway mark.",
-    "guid": "0b593b40-2244-4e86-98fd-c8d82fef84ad"
+    "guid": "da8beaa3-837d-4798-bc6c-6abca42086d5"
   },
   {
     "name": "WRAAC Hillcrest Mtn Rounder",
@@ -334,7 +344,7 @@
     "routelink": "https://ridewithgps.com/routes/35146922",
     "amenities": "No",
     "comments": "This route heads south from the Crowsnest Pass towards the Castle Wilderness on Lynx Creek Rd then loops back to Blairmore on Adanac Rd. Big climbs and fast descents await. No cell service and no services at all along the way so plan accordingly. amping available in Blairmore at the Lost Lemon Campground, there are random camping zones on the southern segment of Lynx Creek Rd, and Lynx Creek Campground is located on Carbondale Rd.",
-    "guid": "d879254f-233b-4ea1-9d68-ff4e1a2dcbf5"
+    "guid": "4d322ab6-b153-486a-93cc-35960d57d73d"
   },
   {
     "name": "WRAAC Porcupine Loop",
@@ -346,7 +356,7 @@
     "routelink": "https://ridewithgps.com/routes/35166850",
     "amenities": "No",
     "comments": "Starting and finishing at the Maycroft Provincial Rec Area this route takes you through historic ranchlands, up into the Porcupine Hills, and back again. Loaded with spectacular views, significant climbing , and equal amounts of descending, this route will tingle all the senses.At the top of East Sharples Road (after the switchbacks) you have a choice to do the loop in either direction. There are no services and no water so bring extra and be prepared. Enjoy a lunch at the viewpoint POI overlooking the front range of the Rockies. Finish with a dip in the Old Man River and you've done this route right.",
-    "guid": "20709577-2d20-4554-998b-a708b7678781"
+    "guid": "d1c934f5-18b8-438f-a67e-f4c1740d0e54"
   },
   {
     "name": "Porci's Revenge",
@@ -358,7 +368,7 @@
     "routelink": "https://www.strava.com/routes/2877637134897827692",
     "amenities": "No",
     "comments": "Similar to the Porcupine Loop, this takes on the Southern section. Looped counterclockwise to avoid headwind.",
-    "guid": "8abf1505-f677-4e6f-8cab-945ece6a8cba"
+    "guid": "ee6b49e3-c073-4f51-9aea-8a35dab76341"
   },
   {
     "name": "Porci's Revenge XL",
@@ -370,7 +380,7 @@
     "routelink": "https://www.strava.com/routes/2877728582806989354",
     "amenities": "No",
     "comments": "Porci's Revenge but with Porcupine Loop added.",
-    "guid": "cc7fcb88-0211-4fc0-9d05-bcb5b753aa13"
+    "guid": "100bf49b-1af5-48d1-adac-e3bb1f737098"
   },
   {
     "name": "Porci's Revenge XXL",
@@ -382,7 +392,7 @@
     "routelink": "https://www.strava.com/routes/2877954980301538858",
     "amenities": "No",
     "comments": "Circumnavigate the entire Porcupine Hills. This looks damning.",
-    "guid": "9851ccfc-69f2-49dc-a215-33d70ef60730"
+    "guid": "156f403a-8ab6-4974-bf60-0ad6489731f2"
   },
   {
     "name": "Stavely - Porcupine Durt Locker",
@@ -394,7 +404,7 @@
     "routelink": "https://www.strava.com/routes/2880275397941310820",
     "amenities": "No",
     "comments": "Hit the North end of Porcupine Hills and loop back on Riley Road into Stavely. Do not ride unless it's been dry a few days.",
-    "guid": "81733db2-5ace-44ef-836d-f88281e11b95"
+    "guid": "1ac08c6d-6dbd-41d2-be37-1b95446868f2"
   },
   {
     "name": "Priddis B-Road Longboi",
@@ -406,7 +416,7 @@
     "routelink": "https://www.strava.com/routes/2898275523654122752",
     "amenities": "Yes - Priddis General Store",
     "comments": "Mostly paved, with two great gravel sections. Lots of elevation and back roads connecting the best the Priddis area has to offer.",
-    "guid": "1b05bcf5-47d8-4640-8e4b-09561d38a965"
+    "guid": "3b04ee91-2fe4-4002-b303-a85d6ea734c3"
   },
   {
     "name": "Dirty Alta 2019",
@@ -418,7 +428,7 @@
     "routelink": "https://ridewithgps.com/routes/29029218",
     "amenities": "PLPP store",
     "comments": "Skogan Pass for alternate route. Can also skip HRT and ride on the road.",
-    "guid": "8c4efdd5-1d17-420b-8423-8a671292a226"
+    "guid": "18e6c4c6-ecaa-484a-852b-b59636a4235a"
   },
   {
     "name": "Minnewanka Loop",
@@ -430,7 +440,7 @@
     "routelink": "https://ridewithgps.com/routes/36083614",
     "amenities": "Banff, Canmore",
     "comments": "Must be done outside seasonal closure of Minnewanka to bikes",
-    "guid": "49613ff9-15da-4149-b441-c577a7c011a2"
+    "guid": "6f1bd25c-0d98-4c71-9366-4fdda4825626"
   },
   {
     "name": "Finnegan's Wake",
@@ -442,7 +452,7 @@
     "routelink": "https://ridewithgps.com/routes/30985045",
     "amenities": "None",
     "comments": "Longest gravel climb in the Red Deer River Valley.  Ferry ride",
-    "guid": "27332bc4-f14f-4f60-a519-85c47c272e45"
+    "guid": "18d62f95-a5cb-496f-96d2-a2611bb179e4"
   },
   {
     "name": "Cypress Hills Massacre",
@@ -454,7 +464,7 @@
     "routelink": "https://ridewithgps.com/routes/22194357",
     "amenities": "??",
     "comments": "Dry only",
-    "guid": "63c9ecf3-6880-4287-8038-cd8424baad4a"
+    "guid": "75fa17ce-2989-4c20-9dcf-3c53fba1f317"
   },
   {
     "name": "February Nanton Ride",
@@ -466,7 +476,7 @@
     "routelink": "https://www.strava.com/activities/6679550738",
     "amenities": "Yes, truck stop / Tim Hortons",
     "comments": "Prepare for lots of climbing!",
-    "guid": "8827fd49-21b8-45c2-9418-0068156f12bc"
+    "guid": "83eb3c92-6630-41f9-b39e-c29d00333e9b"
   },
   {
     "name": "Da Hump Plus Gravel",
@@ -478,7 +488,7 @@
     "routelink": "https://www.strava.com/activities/3574768379",
     "amenities": "No",
     "comments": "Start and finish at Hwy 22 and 532 (top of Chain Lakes), make sure to start your computer at the highway or you'll miss the segment. We went past Da Hump so the ride is shorter if you go to the top and return. Hang onto your teeth on the way back down and make sure you're not there during prime 4x4/off road/camping hours. That road is busy.",
-    "guid": "5e9d2ddb-7a1f-449e-84a3-d37bee4ece99"
+    "guid": "262ca242-23c7-44b3-9a5b-d31edb34a41b"
   },
   {
     "name": "Sunday Gravel with Ray",
@@ -490,7 +500,7 @@
     "routelink": "https://www.strava.com/activities/2437460867",
     "amenities": "Yes, Okotoks",
     "comments": "Start and finish south Okotoks, explore area between Okotoks and High River",
-    "guid": "17142104-c2e3-412a-8ead-9559162b0728"
+    "guid": "726c9679-93a7-4c30-a380-69bcaaccc056"
   },
   {
     "name": "Frank Lake Loop",
@@ -502,7 +512,7 @@
     "routelink": "https://www.strava.com/activities/5728441780",
     "amenities": "No",
     "comments": "Start and finish northside parking at Frank Lake (straight east of High River), ride inspired by Jason & Sally Zerk, if you take out the south out and back, there is literally NO elevation on this one.",
-    "guid": "1838c418-3c40-4d50-a6ad-59bc3b34135c"
+    "guid": "d84e258f-90ca-4791-b98b-ef88c13e38ee"
   },
   {
     "name": "Who doesen't love a painted pony?",
@@ -514,7 +524,7 @@
     "routelink": "https://www.strava.com/activities/4061320370",
     "amenities": "Yes, Dewinton area",
     "comments": "Start and finish DeWinton Community Hall, original ride credit Jeremy Neufeld",
-    "guid": "2529741e-505c-49af-bec0-605992f60080"
+    "guid": "f26ea972-0ff7-4492-ade4-09fbbc5c056c"
   },
   {
     "name": "Wyndham - Carseland PP-Canal-Arrowwood Loop",
@@ -526,7 +536,7 @@
     "routelink": "https://www.strava.com/activities/6128759679",
     "amenities": "??",
     "comments": "Start and finish Wyndham-Carsland PP entrance (gates were closed)",
-    "guid": "b039e05f-71f0-4d35-a19b-1a917c57448b"
+    "guid": "80e5e3ee-f755-41c9-8755-9928676ceab7"
   },
   {
     "name": "48 Street Date Night Loop",
@@ -538,7 +548,7 @@
     "routelink": "https://www.strava.com/activities/5924360067",
     "amenities": "Yes, Okotoks",
     "comments": "Start and finish anywhere in downtown Okotoks because you ride right through (this one started at my house so I don't recommend that), Tom M ride credit - Uncle Giggles originally showed me a version of this ride",
-    "guid": "41a3a613-e3b5-4f2f-80e3-ba2ebb51e1a5"
+    "guid": "859dab46-f09a-4868-8f75-2e7293ac1480"
   },
   {
     "name": "HCC Monday Gravel Loop",
@@ -550,7 +560,7 @@
     "routelink": "https://www.strava.com/activities/5432500039",
     "amenities": "Yes, Granary Road",
     "comments": "Start and finish around Red Deer Meats or use Granary Road corner, original ride credit Jeremy Neufeld",
-    "guid": "2aa1d8d1-7d0e-4191-a885-ed1ba393f25c"
+    "guid": "dce38c4a-6e7f-4e61-9471-c1af58e65923"
   },
   {
     "name": "HCC / Big Rock Gravel Ride",
@@ -562,7 +572,7 @@
     "routelink": "https://www.strava.com/activities/5545837029",
     "amenities": "Yes, Okotoks",
     "comments": "Start / finish at Okotoks Big Rock, Hwy 7",
-    "guid": "efd3b199-2589-45f8-b9cf-b297ecc04423"
+    "guid": "7894dddf-8898-42a3-af9f-989eedb00064"
   },
   {
     "name": "Beaver Creek Buffalo Jump Willow Creek Gravel Ride",
@@ -574,7 +584,7 @@
     "routelink": "https://www.strava.com/activities/5576378411",
     "amenities": "Claresholm area has amenities",
     "comments": "Started with a short shuttle just west of Claresholm and ended up in Claresholm.",
-    "guid": "882b949f-6156-467e-a880-24775aeed477"
+    "guid": "e566d4db-56f4-4839-a965-ef0d24942c46"
   },
   {
     "name": "Beaver Creek Explore  - Gravel",
@@ -586,7 +596,7 @@
     "routelink": "https://www.strava.com/activities/4177876917",
     "amenities": "Claresholm area has amenities",
     "comments": "You can get your shuttle driver to drop you off at the southend of the Skyline road, west of Claresholm and pick you up at The Head Smashed In Buffalo Jump, west of Ft. McLeod.",
-    "guid": "6f5534d6-fbe2-4ada-8689-4353bcab7d89"
+    "guid": "35b66924-b972-4a9d-9532-94ae59c5cc36"
   },
   {
     "name": "Writing on Stone Gravel Loop",
@@ -598,7 +608,7 @@
     "routelink": "https://www.strava.com/activities/5064050416",
     "amenities": "??",
     "comments": "Start and finish at WoS",
-    "guid": "474c7cf9-9288-4147-817e-c5d0f781caae"
+    "guid": "441be4f3-b259-4a65-8e03-1d63a7bd64dc"
   },
   {
     "name": "HCC 5-1-3 Gravel Ride",
@@ -610,7 +620,7 @@
     "routelink": "https://www.strava.com/activities/3410324126",
     "amenities": "Yes, Okotoks",
     "comments": "Start and finish in Okotoks",
-    "guid": "e550e311-d8fe-49cd-b8d3-d185c809ab6f"
+    "guid": "0ac640a2-ff7e-4d00-8200-b2e2704cc80c"
   },
   {
     "name": "HCC Gravel Ride",
@@ -622,7 +632,7 @@
     "routelink": "https://www.strava.com/activities/3758988498",
     "amenities": "Yes, Okotoks",
     "comments": "Multisurface exploring south of Okotoks",
-    "guid": "405ed0d3-3baf-4d87-8d91-627cc6601dc5"
+    "guid": "93668bb1-0931-47c0-aded-20543206d80d"
   },
   {
     "name": "Gladys Ridge Gravel Explore",
@@ -634,7 +644,7 @@
     "routelink": "https://www.strava.com/activities/4094890544",
     "amenities": "No?",
     "comments": "Start and finish eastside of Aldersyde overpass, the out 'n back has the coolest barn ever!",
-    "guid": "816797f2-e2f9-49de-af5d-daabfc87fd68"
+    "guid": "4651e81d-2094-4aaf-b00d-a52053e830d4"
   },
   {
     "name": "Chapel Rock and the Oldman",
@@ -646,7 +656,7 @@
     "routelink": "https://ridewithgps.com/routes/35950981",
     "amenities": "Lundbreck, get food and water there",
     "comments": "Difficulty depends on wind and a bit subjective but 3 if not too windy. No water or food enroute except from river. There is a brewery in Lundbreck for post ride re-hydration.",
-    "guid": "83184154-6ffc-4b07-bcde-2093046d91a5"
+    "guid": "9634f372-7dbe-412b-9e4b-d6208867db52"
   },
   {
     "name": "Castle River Ramble",
@@ -658,7 +668,7 @@
     "routelink": "https://ridewithgps.com/routes/34301755",
     "amenities": "Castle River Campground",
     "comments": "A 3 or 4 again depending on wind. Water and a beautiful lunch stop at Castle Falls campground/ day use. Lots of options to shorten the ride by starting at Beaver Mines. Pack Bear Spray on this one. A couple of gates to hop but allowed for hikers and bikers.",
-    "guid": "387b79b7-9b0e-4169-86fd-23fe53960f01"
+    "guid": "90c08358-af24-4fff-af70-9379c5979430"
   },
   {
     "name": "Dirty Crossfield",
@@ -669,7 +679,7 @@
     "author": "Chris Roy",
     "routelink": "https://ridewithgps.com/routes/35367279",
     "amenities": "Calgary, Airdrie, Crossfield",
-    "guid": "3b3f44d2-69fc-4f10-a1cd-d555f243d358"
+    "guid": "25d5ec50-e619-4a66-970b-3158d0097792"
   },
   {
     "name": "Half Cross your Fngers Millarville",
@@ -680,7 +690,7 @@
     "author": "Chris Roy",
     "routelink": "https://ridewithgps.com/routes/37778072",
     "amenities": "N/A, nothing en route for amenities",
-    "guid": "5fd58b32-edaf-4d56-906b-2410365f4837"
+    "guid": "66a061c0-daa4-4bcf-bebd-7ef1a9e26ca3"
   },
   {
     "name": "Bottrel BackYard Medium",
@@ -691,7 +701,7 @@
     "author": "Chris Roy",
     "routelink": "https://ridewithgps.com/routes/36873355",
     "amenities": "No, Airdrie",
-    "guid": "6fccf6f3-6e49-41f9-88df-0295fcaa669e"
+    "guid": "fa811020-c6c3-4feb-8baa-328ecaee3ebe"
   },
   {
     "name": "Short Anne & Sandy Cross",
@@ -702,7 +712,7 @@
     "author": "Chris Roy",
     "routelink": "https://ridewithgps.com/routes/37341636",
     "amenities": "Granary Road market",
-    "guid": "a50a6742-f6f8-4f82-9b76-43585be4632d"
+    "guid": "fb7b0801-d5e5-4624-97c4-7b7ea94f52c7"
   },
   {
     "name": "South Dogpound Loop",
@@ -713,7 +723,7 @@
     "author": "Chris Roy",
     "routelink": "https://ridewithgps.com/routes/38046042",
     "amenities": "No",
-    "guid": "39508858-6141-4dc1-838b-ea1986e42003"
+    "guid": "b67048f1-93df-47a3-800b-37eabc7049bc"
   },
   {
     "name": "McLean Sheep Gravel Loop",
@@ -724,7 +734,7 @@
     "author": "Chris Roy",
     "routelink": "https://ridewithgps.com/routes/31126065",
     "amenities": "Black Diamond area, nothing en route",
-    "guid": "64deae52-ffa8-41a4-9521-94f7e04a47b2"
+    "guid": "a13db6fe-4175-4076-830b-59b953dd4525"
   },
   {
     "name": "Ghost of the Gravel",
@@ -736,7 +746,7 @@
     "routelink": "https://ridewithgps.com/routes/27540100",
     "amenities": "No",
     "comments": "Epic!",
-    "guid": "f08b3ae5-52ab-4ba8-be5c-69ece6892db0"
+    "guid": "2389aed4-2606-4a28-a7d2-af815e514fd6"
   },
   {
     "name": "Towers Trail",
@@ -747,7 +757,7 @@
     "author": "Adam Clark",
     "routelink": "https://ridewithgps.com/routes/35464284",
     "amenities": "Cochrane",
-    "guid": "5288c427-64e1-4e09-96dc-4b0cb4f137a2"
+    "guid": "8437253c-cf86-472e-b38c-23741330520b"
   },
   {
     "name": "Ghosty Day",
@@ -758,7 +768,7 @@
     "author": "Chris Roy",
     "routelink": "https://ridewithgps.com/routes/37642814",
     "amenities": "Water Valley",
-    "guid": "20b44c0e-99a3-4c86-a82e-6967214b1a81"
+    "guid": "0ad0620c-f187-426d-8403-5e484015f5b6"
   },
   {
     "name": "Water Valley BP",
@@ -769,7 +779,7 @@
     "author": "Chris Roy",
     "routelink": "https://ridewithgps.com/routes/37818813",
     "amenities": "Calgary, Airdire, Madden",
-    "guid": "0f1211f6-0bf6-4b21-8056-c0289caaf052"
+    "guid": "67804e6e-426e-47ed-8b2a-88977d653e6a"
   },
   {
     "name": "Gorge Creek Overnighter",
@@ -781,7 +791,7 @@
     "routelink": "https://ridewithgps.com/routes/36516624",
     "amenities": "Calgary",
     "comments": "Big route!",
-    "guid": "1580b66c-98c1-41bb-bb31-5b1a323f2343"
+    "guid": "87ad1b89-b780-46ec-bf7b-61eb0e237c1a"
   },
   {
     "name": "McLean Creek Trail",
@@ -792,7 +802,7 @@
     "author": "Chris Roy",
     "routelink": "https://ridewithgps.com/routes/38558017",
     "amenities": "No",
-    "guid": "45731707-bf1d-4cdb-a84c-24d8dbb44078"
+    "guid": "42dcd839-a672-4138-addb-41586e42fff8"
   },
   {
     "name": "Ken Fox Towers Edition",
@@ -803,7 +813,7 @@
     "author": "Chris Roy",
     "routelink": "https://ridewithgps.com/routes/38557999",
     "amenities": "Calgary",
-    "guid": "64d73cd6-727d-40cd-9c21-d5d0f835e1cb"
+    "guid": "233b0a3d-34b3-486b-b023-784b939df9c3"
   },
   {
     "name": "Horse Thieves & Cattle Rustlers",
@@ -814,7 +824,7 @@
     "author": "Chris Roy",
     "routelink": "https://ridewithgps.com/routes/37084929",
     "amenities": "Cochrane",
-    "guid": "c64969ed-b814-48d5-bee3-daa22b33871d"
+    "guid": "526f038f-3394-4640-8f37-2a873139f818"
   },
   {
     "name": "Pincher-Porcupine Overnighter",
@@ -825,7 +835,7 @@
     "author": "Chris Roy",
     "routelink": "https://ridewithgps.com/routes/37372162",
     "amenities": "Lundbreck, Pincher Creek?",
-    "guid": "4aeda029-964c-4f6b-96bc-17154a1d9ce1"
+    "guid": "0e710fe7-f4d5-45a2-9a40-574f16f7151e"
   },
   {
     "name": "Priddis - Tuner Valley Gravel Loop",
@@ -836,7 +846,7 @@
     "author": "Chris Roy",
     "routelink": "https://ridewithgps.com/routes/35396236",
     "amenities": "Priddis?",
-    "guid": "3436bce0-7590-467a-8862-c1c01b1123b5"
+    "guid": "997f0419-8bf2-4622-bef2-b3d84ba17f23"
   },
   {
     "name": "Dirty Airdrie",
@@ -847,7 +857,7 @@
     "author": "Chris Roy",
     "routelink": "https://ridewithgps.com/routes/36923402",
     "amenities": "Airdrie",
-    "guid": "da797d18-4d86-4159-88e4-e2230b5cc6d1"
+    "guid": "c5d9d32e-e710-4da3-882f-e8e334dcc6fd"
   },
   {
     "name": "In Search of the Giant Chicken",
@@ -859,7 +869,7 @@
     "routelink": "https://www.strava.com/activities/3787703254",
     "amenities": "Only in Black Diamond",
     "comments": "Start and finish at Tim Horton's Black Diamond, you can always split this route in two to cut the distance",
-    "guid": "d75a40ca-cb1d-477e-9e00-1299afe84eb8"
+    "guid": "6fc774fc-4c48-4e94-8293-6d81f99eef57"
   },
   {
     "name": "In Search of the Giant Chicken (shorty)",
@@ -871,7 +881,7 @@
     "routelink": "https://www.strava.com/activities/5842760798",
     "amenities": "Only in Black Diamond",
     "comments": "Shorter version but you miss the awesome out and back!",
-    "guid": "91908014-5f41-43e8-ab35-142afc502a15"
+    "guid": "27cd2378-762d-4871-b621-c2cf065f683d"
   },
   {
     "name": "Claresholm Gravel Ride",
@@ -883,7 +893,7 @@
     "routelink": "https://www.strava.com/activities/4980540458",
     "amenities": "Claresholm area has amenities",
     "comments": "Start and finish at Sonya's Mom's house lol!",
-    "guid": "0d5f9e29-67e7-4601-af7b-623e581f2bd4"
+    "guid": "c88ec172-0e3c-4447-81f2-84268413f4d9"
   },
   {
     "name": "Claresholm Gravel Shorty",
@@ -895,7 +905,7 @@
     "routelink": "https://www.strava.com/activities/2546658581",
     "amenities": "Claresholm area has amenities",
     "comments": "Start and finish at Sonya's Mom's house lol! An easy and fun explore...",
-    "guid": "4dba9fb5-45e3-4e1a-a020-0a4893405cff"
+    "guid": "755d33f8-12e2-4c9a-bec1-33ee7155928e"
   },
   {
     "name": "Madden - Crossfield Gravel Loop",
@@ -906,7 +916,7 @@
     "author": "Chris Roy",
     "routelink": "https://ridewithgps.com/routes/37411465",
     "amenities": "Madden, Crossfield, Airdrie etc.",
-    "guid": "8790969f-23ef-4bb7-988e-2af683032e26"
+    "guid": "8ebb061d-f86d-464e-b3eb-03ffe0b6f6eb"
   },
   {
     "name": "Beaver Mines - Lundbreck - Beaver Mines",
@@ -917,7 +927,7 @@
     "author": "The Gravel Experience",
     "routelink": "https://ridewithgps.com/routes/36485140",
     "amenities": "??",
-    "guid": "bfad3c09-ed97-4c86-979f-7687d2807190"
+    "guid": "3c832d0e-076a-418c-8cb8-5a11712eaede"
   },
   {
     "name": "Weekend Gravel Delight",
@@ -928,7 +938,7 @@
     "author": "Chris Roy",
     "routelink": "https://ridewithgps.com/routes/36013279",
     "amenities": "Calgary",
-    "guid": "d0de1190-2fed-448d-af06-8b8d1f9dfd78"
+    "guid": "a7cea6bc-9187-477a-902a-9eee188b1128"
   },
   {
     "name": "Rockyford, Rosebud, Wayne Gravel Loops",
@@ -940,7 +950,7 @@
     "routelink": "https://ridewithgps.com/routes/35480661",
     "amenities": "Rockyford, Rosebud",
     "comments": "Gorrgeous scenery, lots of coulees etc.",
-    "guid": "31737cd7-13e6-4b9e-8609-bc0450c3e35b"
+    "guid": "66250c8c-23fd-49e6-9d42-380ac750af52"
   },
   {
     "name": "Windmills and Buffalo Jumps",
@@ -951,7 +961,7 @@
     "author": "Chris Roy",
     "routelink": "https://ridewithgps.com/routes/36343547",
     "amenities": "Pincher Creek? Head Smashed In Buffalo Jump",
-    "guid": "e8b04b1a-0be2-4a16-b51c-deffabcf71f5"
+    "guid": "85df5b8e-505a-402d-93ac-122d4f362d43"
   },
   {
     "name": "Pine Creek Gravel Party",
@@ -962,7 +972,7 @@
     "author": "Chris Roy",
     "routelink": "https://ridewithgps.com/routes/37306219",
     "amenities": "Pine Creek / Belmont",
-    "guid": "9961d6f6-984e-439b-9a34-487eee303dab"
+    "guid": "7c66d745-7fc2-4876-b50c-4b2dbfe07539"
   },
   {
     "name": "Priddis B-Roads Part 1",
@@ -973,7 +983,7 @@
     "author": "Chris Roy",
     "routelink": "https://ridewithgps.com/routes/35494984",
     "amenities": "Priddis",
-    "guid": "2bba1666-7e32-41cd-b4b1-19a0f207f446"
+    "guid": "3336029c-bcc8-436c-8e1a-6d2d6ecf1447"
   },
   {
     "name": "Sirocco 50/50",
@@ -984,7 +994,7 @@
     "author": "Chris Roy",
     "routelink": "https://ridewithgps.com/routes/36894411",
     "amenities": "Calgary, fuel up before you leave the city",
-    "guid": "fcb89942-50d0-4673-9f1b-1547cb62eb4b"
+    "guid": "a6add207-e1fb-467d-b4ba-5dff48036c51"
   },
   {
     "name": "Impassable Goldenrod",
@@ -995,7 +1005,7 @@
     "author": "Chris Roy",
     "routelink": "https://ridewithgps.com/routes/36893951",
     "amenities": "Airdrie",
-    "guid": "f054beb1-0613-416e-bbae-fcd82eed3eb4"
+    "guid": "5ca95671-8084-4a60-a1af-7e487a78f9b3"
   },
   {
     "name": "Millarville Secret",
@@ -1006,7 +1016,7 @@
     "author": "Chris Roy",
     "routelink": "https://ridewithgps.com/routes/37265988",
     "amenities": "Millarville",
-    "guid": "ae77bfa8-3781-4281-9b0c-bf155a301d30"
+    "guid": "820c11ae-511b-4e80-8480-b93b86424b91"
   },
   {
     "name": "Wintering HIlls",
@@ -1018,7 +1028,7 @@
     "routelink": "https://ridewithgps.com/routes/28092099",
     "amenities": "East Coulee Museum cafe.  Atlas Coal mine store.",
     "comments": "Feel that turbine wind in your hair, and grab some field peas if you start to bonk.",
-    "guid": "ad866971-72ab-49aa-8bf2-b983f7f3505a"
+    "guid": "3c6ef7a2-03bb-4998-a4ee-218b2484bca0"
   },
   {
     "name": "The Stegosaurus: All the Gravel Vert!",
@@ -1030,7 +1040,7 @@
     "routelink": "https://ridewithgps.com/routes/30364178",
     "amenities": "Rosedale",
     "comments": "The \"spine\" is paved, everything else is gravel.",
-    "guid": "964dbb83-9b09-485e-b92c-3df58a5c542a"
+    "guid": "57f31495-4164-4632-8153-810e3bde67d1"
   },
   {
     "name": "WRAAC Nanton Hills",
@@ -1042,7 +1052,7 @@
     "routelink": "https://ridewithgps.com/routes/38516268?fbclid=IwAR22xU5TSXcdCsHWMhV0Vktx73uP8FFvP3rSIHN20Ku7KsNT-RLA43AfVNA",
     "amenities": "N/A bring your own water and snacks",
     "comments": "A long 6km climb and a 9km descent highglihgts this cool route",
-    "guid": "d91797f5-9bb2-4ef5-907a-9542f9c133f5"
+    "guid": "fa161da7-d753-4d1b-9fb5-d87373e6a88b"
   },
   {
     "name": "Priddis 100K Route",
@@ -1054,7 +1064,7 @@
     "routelink": "https://ridewithgps.com/trips/90260495?fbclid=IwAR2KBy6jJpcUJdVT7Uk1MmiIdNV6y-hlZUJPbPT0zgjLaK2f5rtasJTozPE",
     "amenities": "Millarville General Store",
     "comments": "Gravel, dirt and a bit of pavement",
-    "guid": "b675688c-27ab-43d4-8038-2b1671fdf5bc"
+    "guid": "dbd23188-c9c3-4d34-a1cb-e4008c781f0c"
   },
   {
     "name": "High Rockies",
@@ -1066,7 +1076,7 @@
     "routelink": "https://ridewithgps.com/routes/20193284?fbclid=IwAR10fTandDYyRZZoV582ph0ROLJnu5CCddYp0LdMAsDDszPgvSM1wEokbEM",
     "amenities": "Banff, Canmore",
     "comments": "Check out \"Bikepacking in the Canadian Rockies: book for more info",
-    "guid": "8b52eb4d-bb6b-42e6-a5d4-28cb0527c395"
+    "guid": "326889f9-2777-46b1-b076-7face629b2d9"
   },
   {
     "name": "Rosebud - Drumheller Loop",
@@ -1078,7 +1088,7 @@
     "routelink": "https://www.strava.com/activities/7066840437?fbclid=IwAR3TwNdr-5YTuy-jIfRuiDauBVgcngtuR5Wxm5CbZa1V-0GrsSmU25NPd1I",
     "amenities": "Rosebud and Drumheller",
     "comments": "The rail line from Rosebud to Wayne is still deep gravel rail bed.  2\"+ tires (even fatbike). Some gaps on the abandonded bridges. ",
-    "guid": "d55df7d5-87a7-4291-96db-bd0e8a0dcdaf"
+    "guid": "2cdbee62-855b-4afb-b271-5c5d451690df"
   },
   {
     "name": "Priddis 70K Loop",
@@ -1089,7 +1099,7 @@
     "author": "David Stewart",
     "routelink": "https://ridewithgps.com/routes/39200552?fbclid=IwAR1eCGxTnV33TZsiqjILeCoIcpgd6IoFNX8qEqIBkIszJNtlR0nBAn4Ud3Y",
     "amenities": "Priddis at the start of the route and thats it",
-    "guid": "68af87ef-9c9e-4498-bc6d-12960043c13a"
+    "guid": "ce918062-b5ee-4b28-adf6-5804de85e7a9"
   },
   {
     "name": "The Range Recon",
@@ -1100,7 +1110,7 @@
     "author": "Barry Smith",
     "routelink": "https://www.strava.com/activities/7035344033?share_sig=62A2E5D91650847006&utm_medium=social&utm_source=ios_share",
     "amenities": "Claresholm   ",
-    "guid": "bb871e9a-6569-4f0e-a3e0-b62417d81623"
+    "guid": "e2e19dbd-98b4-49b4-8f15-387c5c3a02b0"
   },
   {
     "name": "Crossfield Donut Burner Stubby Version",
@@ -1112,7 +1122,7 @@
     "routelink": "https://www.strava.com/routes/2942584288720137850?fbclid=IwAR2GU5Q96S5QbEp3L9UONoEVRMTZdl2xzM0AHqhepg3jrre_ldJNWj5cjKA",
     "amenities": "Crossfield",
     "comments": "make sure to stop at The Donut Man for donuts!",
-    "guid": "def605c6-e467-4571-b4f8-2d66a35a92f0"
+    "guid": "59fa2b1a-7154-4610-a9d3-5eea13492bf1"
   },
   {
     "name": "Crossfield Donut Burner ",
@@ -1124,7 +1134,7 @@
     "routelink": "https://www.strava.com/routes/2941527291741188392?fbclid=IwAR22xU5TSXcdCsHWMhV0Vktx73uP8FFvP3rSIHN20Ku7KsNT-RLA43AfVNA",
     "amenities": "Crossfield",
     "comments": "make sure to stop at The Donut Man for donuts!",
-    "guid": "4bb6ec0c-82ce-473b-b1c3-51128ea07031"
+    "guid": "cf0b9835-d704-40b5-b27c-61a2c10efa0f"
   },
   {
     "name": "Crossfield Donut Burner Short",
@@ -1136,7 +1146,7 @@
     "routelink": "https://www.strava.com/routes/2941537248586508656?fbclid=IwAR0K5QXqqa1oV8_NmjfrkuX-BLkjfU-zcgIwRQyhXrP77WRJ0c6v8e2ti3k",
     "amenities": "Crossfield",
     "comments": "make sure to stop at The Donut Man for donuts!",
-    "guid": "c71b0d79-5b8a-4c75-a6e8-e0e29f8fe514"
+    "guid": "d4f389c2-b83c-4bbc-b746-d28b03d5095a"
   },
   {
     "name": "Ware Ridge Alternate",
@@ -1148,7 +1158,7 @@
     "routelink": "https://www.strava.com/routes/2939320857755350328?fbclid=IwAR3SBh4GHBRwLf0vUzYz4x2uVxaW8KlI9KgXU6tchkEEjjvUuNiiYDVutlg",
     "amenities": "Millarville",
     "comments": "Check out Fahr brewery after in Turner Valley",
-    "guid": "ad0d0dcb-7f7a-43de-9f58-dea2d042c149"
+    "guid": "1b329b77-e9c5-494b-a528-35ce3356398f"
   },
   {
     "name": "WRAAC Majorville Medicine Wheel",
@@ -1160,6 +1170,6 @@
     "routelink": "https://ridewithgps.com/routes/38478641?fbclid=IwAR16PEVcSD6sjG--f6cH1AOIbz2g833aI_whjLskXFyPMp6IUxHJ1HaZz78",
     "amenities": "No services, shade or water",
     "comments": "Do not block drivways or access roads, don't ride in wet conditions. watch for cattle guards, the yellow segment goes through a \"closed\" section thought the gates are open and are not private property",
-    "guid": "bb7307c3-fef6-4085-9273-660c675cdec1"
+    "guid": "44c2a9ec-412c-4c38-a267-e1325558e758"
   }
 ]

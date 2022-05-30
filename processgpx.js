@@ -2,33 +2,59 @@ const tj = require("@tmcw/togeojson");
 const fs = require("fs");
 const path = require("path");
 const xmldom = require("@xmldom/xmldom");
+const { resolve } = require("path");
 const gpxDir = "./gpx/";
 
 const tracks = { type: "FeatureCollection", features: [] };
 
-//load manifest.json, for each item, convert to geojson, add metadata, then append to file
-
+//TODO: check that manifest exists
 const manifest = JSON.parse(fs.readFileSync("manifest.json"));
 
-manifest.map((m) => {
-  const gpxFileName = gpxDir + m.guid + ".gpx";
-  console.log("Processing: " + gpxFileName)
-  if (fs.existsSync(gpxFileName)) {
-    const gpx = new xmldom.DOMParser().parseFromString(
-      fs.readFileSync(gpxFileName).toString("utf8"),
-      "utf8"
-    );
-    //TODO: handle malformed gpx files
-    var converted = JSON.stringify(tj.gpx(gpx).features[0]);
-    //console.log(converted)
-    tracks.features.push(JSON.parse(converted));
-    //TODO: add feature property like:  "popupContent":"This is the pop-up."
-  }
-});
+const xmlToDom = (gpxFileName) => {
+      //TODO: handle malformed gpx files
+    if (fs.existsSync(gpxFileName)) {
+      try {
+      return ( new xmldom.DOMParser().parseFromString(
+        fs.readFileSync(gpxFileName).toString("utf8"),
+        "utf8"
+      ));
+      }
+  catch {
+    console.log("Can't convert the gpx to DOM")
+    return false;
+  };
+};
+};
 
-fs.writeFile("./geojson/geojson.json", JSON.stringify(tracks), (err) => {
-  if (err) {
-    console.error(err);
-  }
-  console.log("Wrote geojson successfully.");
-});
+const processManifest = async () => {
+  manifest.map((m) => {
+      const gpxFileName = gpxDir + m.guid + ".gpx";
+      console.log("Processing: " + gpxFileName);
+      const gpx = xmlToDom(gpxFileName);
+      if(gpx){
+        try{
+            var converted = tj.gpx(gpx).features[0];
+            converted.properties.popupContent = m.name;
+            tracks.features.push(converted);
+            
+          }
+      catch{
+        console.log("Couldn't convert " + gpxFileName + " to JSON")
+      }
+    };
+        //TODO: add feature property like:  "popupContent":"This is the pop-up."
+      }
+    );
+    await writeGeojson();
+  };
+
+const writeGeojson = () =>{
+  fs.writeFile("./geojson/geojson.json", JSON.stringify(tracks), (err) => {
+    if (err) {
+      console.error(err);
+    }
+    console.log("Wrote geojson successfully.");
+  });
+};
+
+processManifest();

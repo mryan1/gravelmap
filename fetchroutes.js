@@ -5,29 +5,28 @@
 const fs = require("fs");
 const { google } = require("googleapis");
 require("dotenv").config();
-//const gpx = require("./processgpx");
 const https = require("https");
+const { resolve } = require("path");
 const { v4: uuidv4 } = require("uuid");
 
 const params = {
   sheetId: "1XvJrmn89OD5V2_1ixNxIJJbd8xfAYiPKveGrQE6EC0c",
   apikey: process.env.GOOGLEAPIKEY,
+  sheets: [
+    "Central Alberta!A:I",
+    "Southern Alberta!A:I",
+    "Northern Alberta!A:I",
+  ],
 };
 
 const getRouteGPX = (uri, uuid) => {
-  //determine if route is ridewithgps, strava route, or strava activity and fetch accordingly
   if (uri.includes("ridewithgps.com/routes")) {
-    if(uri.includes("?")){
-      const sanURI = uri.substring(0, uri.indexOf('?') -1) + ".gpx?sub_format=track"
+    var sanURI;
+    if (uri.includes("?")) {
+      sanURI = uri.substring(0, uri.indexOf("?") - 1) + ".gpx?sub_format=track";
+    } else {
+      sanURI = uri + ".gpx?sub_format=track";
     }
-    else{
-      sanURI = uri + ".gpx?sub_format=track"
-    }
-    console.log(sanURI)
-    //console.log("Route link:" + uri.substring(0, uri.indexOf('?') -1) + ".gpx?sub_format=track");
-    //https://ridewithgps.com/routes/35088794.gpx?sub_format=track
-    //https://ridewithgps.com/routes/35088794
-    //Route link:https://ridewithgps.com/routes/38516268?fbclid=IwAR22xU5TSXcdCsHWMhV0Vktx73uP8FFvP3rSIHN20Ku7KsNT-RLA43AfVNA.gpx?sub_format=track
     https.get(sanURI, (res) => {
       // Image will be stored at this path
       const path = "./gpx/" + uuid + ".gpx";
@@ -35,66 +34,78 @@ const getRouteGPX = (uri, uuid) => {
       res.pipe(filePath);
       filePath.on("finish", () => {
         filePath.close();
-        console.log("Download Completed");
       });
     });
-
-    console.log("ridewithgps route!");
   } else if (uri.includes("strava.com/routes")) {
-    console.log("Strava route!");
+
   } else if (uri.includes("strava.com/activities")) {
-    console.log("Strava activity!");
+
   } else if (uri.includes("ridewithgps.com/trips")) {
-    console.log("ridewithgps trip!");
+
   } else {
     console.log("unknown route type!");
   }
 };
 
-//TODO: iterate though each sheet (tab at the bottom)
-const getRoutes = (callback) => {
+async function getSheet(s) {
   const sheets = google.sheets({ version: "v4", auth: params.apikey });
-
-  sheets.spreadsheets.values.get(
-    {
-      spreadsheetId: params.sheetId,
-      range: "A:I",
-    },
-    (err, res) => {
-      var routes = []
-      if (err) return console.log("The API returned an error: " + err);
-      const rows = res.data.values;
-      if (rows.length) {
-        rows.map((row) => {
-          //create JSON object for each row
-          const uuid = uuidv4();
-          routes.push({
-            name: row[0],
-            location: row[1],
-            distance: row[2],
-            elevation: row[3],
-            difficulty: row[4],
-            author: row[5],
-            routelink: row[6],
-            amenities: row[7],
-            comments: row[8],
-            guid: uuid,
-          });
-          getRouteGPX(row[6], uuid);
-        });
-      } else {
-        console.log("No data found.");
+  console.log("Downloading " + s);
+  try {
+    var res = await sheets.spreadsheets.values.get(
+      {
+        spreadsheetId: params.sheetId,
+        range: s,
       }
-        callback(routes);
-    }
-  );
+    )
+    return res.data.values
+  }
+  catch (err) {
+    console.log("Could connect to API: " + err)
+  }
 };
 
-  getRoutes((r) => {
-    fs.writeFile("./manifest.json", JSON.stringify(r), (err) => {
-      if (err) {
-        console.error(err);
+
+
+async function getRoutes() {
+  var routes = [];
+  var rows = [];
+  for (const x of params.sheets) {
+    Array.prototype.push.apply(rows, (await getSheet(x)));
+  }
+  if (rows.length) {
+    rows.map((row) => {
+      //create JSON object for each row
+      const uuid = uuidv4();
+      routes.push({
+        name: row[0],
+        location: row[1],
+        distance: row[2],
+        elevation: row[3],
+        difficulty: row[4],
+        author: row[5],
+        routelink: row[6],
+        amenities: row[7],
+        comments: row[8],
+        guid: uuid,
+      });
+      if (row[6]) {
+        getRouteGPX(row[6], uuid);
       }
-      console.log("Wrote manifest successfully.");
+      //console.log(routes)
     });
+  } else {
+    console.log("No data found.");
+  }
+  return routes;
+};
+
+const writeManifest = async () => {
+  r = await getRoutes()
+  fs.writeFile("./manifest.json", JSON.stringify(r), (err) => {
+    if (err) {
+      console.error(err);
+    }
+    console.log("Wrote manifest successfully.");
   });
+};
+writeManifest();

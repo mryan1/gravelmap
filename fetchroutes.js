@@ -8,6 +8,7 @@ require("dotenv").config();
 const https = require("https");
 const { resolve } = require("path");
 const { v4: uuidv4 } = require("uuid");
+const strava = require("strava-v3");
 
 const params = {
   sheetId: "1XvJrmn89OD5V2_1ixNxIJJbd8xfAYiPKveGrQE6EC0c",
@@ -18,32 +19,66 @@ const params = {
     "Northern Alberta!A:I",
   ],
 };
+const fetchRidewithgps = async (uri, uuid, type) => {
+  var sanURI;
+  if (uri.includes("?")) {
+    sanURI = uri.substring(0, uri.indexOf("?") - 1) + ".gpx?sub_format=track";
+  } else {
+    sanURI = uri + ".gpx?sub_format=track";
+  }
+  https.get(sanURI, (res) => {
+    // Image will be stored at this path
+    const path = "./gpx/" + uuid + ".gpx";
+    const filePath = fs.createWriteStream(path);
+    console.log("Writing ridewithgps " + type + ": " + path);
+    res.pipe(filePath);
+    filePath.on("finish", () => {
+      filePath.close();
+    });
+  });
+
+};
+
+const fetchStravaRoute = async (uuid, routeId) => {
+  const sr = await strava.routes.getFile(
+    { id: routeId, file_type: "gpx" },
+    (error, data, response) => {
+      const path = "./gpx/" + uuid + ".gpx";
+      console.log("Writing strava gpx: " + path + " for route id " + routeId);
+      if (error) {
+        console.error("Error fetching Strava route: " + error);
+      } else {
+        fs.writeFile(path, data, (err) => {
+          if (err) {
+            console.error(err);
+          }
+          // file written successfully
+        });
+      }
+    }
+  );
+};
 
 const getRouteGPX = (uri, uuid) => {
   if (uri.includes("ridewithgps.com/routes")) {
-    var sanURI;
-    if (uri.includes("?")) {
-      sanURI = uri.substring(0, uri.indexOf("?") - 1) + ".gpx?sub_format=track";
-    } else {
-      sanURI = uri + ".gpx?sub_format=track";
-    }
-    https.get(sanURI, (res) => {
-      // Image will be stored at this path
-      const path = "./gpx/" + uuid + ".gpx";
-      const filePath = fs.createWriteStream(path);
-      res.pipe(filePath);
-      filePath.on("finish", () => {
-        filePath.close();
-      });
-    });
+
+    fetchRidewithgps(uri, uuid, "route")
+
   } else if (uri.includes("strava.com/routes")) {
 
-  } else if (uri.includes("strava.com/activities")) {
+    //TODO: figure out how to deal with token expiry
+    const regex = /https:\/\/www\.strava\.com\/routes\/(\d+)/;
+    const routeId = uri.match(regex)[1];
+    fetchStravaRoute(uuid, routeId);
 
+  } else if (uri.includes("strava.com/activities")) {
+    console.log("Strava activity not yet supported.")
+    
   } else if (uri.includes("ridewithgps.com/trips")) {
+    fetchRidewithgps(uri, uuid, "trip")
 
   } else {
-    console.log("unknown route type!");
+    console.log("unknown route type! " + uri);
   }
 };
 
@@ -51,26 +86,21 @@ async function getSheet(s) {
   const sheets = google.sheets({ version: "v4", auth: params.apikey });
   console.log("Downloading " + s);
   try {
-    var res = await sheets.spreadsheets.values.get(
-      {
-        spreadsheetId: params.sheetId,
-        range: s,
-      }
-    )
-    return res.data.values
+    var res = await sheets.spreadsheets.values.get({
+      spreadsheetId: params.sheetId,
+      range: s,
+    });
+    return res.data.values;
+  } catch (err) {
+    console.log("Could connect to API: " + err);
   }
-  catch (err) {
-    console.log("Could connect to API: " + err)
-  }
-};
-
-
+}
 
 async function getRoutes() {
   var routes = [];
   var rows = [];
   for (const x of params.sheets) {
-    Array.prototype.push.apply(rows, (await getSheet(x)));
+    Array.prototype.push.apply(rows, await getSheet(x));
   }
   if (rows.length) {
     rows.map((row) => {
@@ -89,7 +119,9 @@ async function getRoutes() {
         guid: uuid,
       });
       if (row[6]) {
-        getRouteGPX(row[6], uuid);
+        setTimeout(() => {
+          getRouteGPX(row[6], uuid);
+        }, Math.floor(Math.random() * 5000));
       }
       //console.log(routes)
     });
@@ -97,10 +129,11 @@ async function getRoutes() {
     console.log("No data found.");
   }
   return routes;
-};
+}
 
 const writeManifest = async () => {
-  r = await getRoutes()
+  r = await getRoutes();
+
   fs.writeFile("./manifest.json", JSON.stringify(r), (err) => {
     if (err) {
       console.error(err);

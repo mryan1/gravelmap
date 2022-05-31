@@ -3,3 +3,6 @@ package-lock.json
 gpx
 .env
 manifest.json
+./geojson/geojson.json
+.vscode/launch.json
+

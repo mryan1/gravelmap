@@ -1,0 +1,11 @@
+version: "2"
+services:
+  node:
+    image: "mryan21/gravelmap:latest"
+    user: "node"
+    working_dir: /app
+    environment:
+      - NODE_ENV=production
+    expose:
+      - "80"
+    command: "node server.js"

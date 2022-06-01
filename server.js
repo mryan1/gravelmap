@@ -39,6 +39,6 @@ app.get("/convertGPX", (request, response) => {
 });
 
 // listen for requests :)
-const listener = app.listen(process.env.PORT, () => {
+const listener = app.listen(process.env.PORT, '0.0.0.0', () => {
   console.log("Your app is listening on port " + listener.address().port);
 });

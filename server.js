@@ -8,7 +8,8 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const app = express();
-const convertGPX = require("./processgpx")
+const fetchGPX = require("./fetchroutes");
+const convertGPX = require("./processgpx");
 
 // make all the files in 'public' available
 // https://expressjs.com/en/starter/static-files.html
@@ -24,15 +25,17 @@ app.get("/", (request, response) => {
 
 //endpoint for getting all geojson trails in one json object
 app.get("/trails", (request, response) => {
-  let rawdata = fs.readFileSync(path.resolve(__dirname, "./geojson/geojson.json"));
+  let rawdata = fs.readFileSync(
+    path.resolve(__dirname, "./geojson/geojson.json")
+  );
   let trails = JSON.parse(rawdata);
-  response.send(trails)
+  response.send(trails);
 });
 
 app.get("/convertGPX", (request, response) => {
   //TODO: add error condition here
   convertGPX();
-  response.sendStatus(200)
+  response.sendStatus(200);
 });
 
 // listen for requests :)

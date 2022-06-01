@@ -1,6 +1,4 @@
-//read in each tab from the google spreadsheet and store as object
-//object should have some methods to fetch gpx
-// needs to have properties to populate the pop-ups with
+//TODO: clean up gpx directory before or after fetching
 
 const fs = require("fs");
 const { google } = require("googleapis");
@@ -27,7 +25,6 @@ const fetchRidewithgps = async (uri, uuid, type) => {
     sanURI = uri + ".gpx?sub_format=track";
   }
   https.get(sanURI, (res) => {
-    // Image will be stored at this path
     const path = "./gpx/" + uuid + ".gpx";
     const filePath = fs.createWriteStream(path);
     console.log("Writing ridewithgps " + type + ": " + path);
@@ -36,7 +33,6 @@ const fetchRidewithgps = async (uri, uuid, type) => {
       filePath.close();
     });
   });
-
 };
 
 const fetchStravaRoute = async (uuid, routeId) => {
@@ -52,7 +48,6 @@ const fetchStravaRoute = async (uuid, routeId) => {
           if (err) {
             console.error(err);
           }
-          // file written successfully
         });
       }
     }
@@ -61,22 +56,16 @@ const fetchStravaRoute = async (uuid, routeId) => {
 
 const getRouteGPX = (uri, uuid) => {
   if (uri.includes("ridewithgps.com/routes")) {
-
-    fetchRidewithgps(uri, uuid, "route")
-
+    fetchRidewithgps(uri, uuid, "route");
   } else if (uri.includes("strava.com/routes")) {
-
     //TODO: figure out how to deal with token expiry
     const regex = /https:\/\/www\.strava\.com\/routes\/(\d+)/;
     const routeId = uri.match(regex)[1];
     fetchStravaRoute(uuid, routeId);
-
   } else if (uri.includes("strava.com/activities")) {
-    console.log("Strava activity not yet supported.")
-    
+    console.log("Strava activity not yet supported.");
   } else if (uri.includes("ridewithgps.com/trips")) {
-    fetchRidewithgps(uri, uuid, "trip")
-
+    fetchRidewithgps(uri, uuid, "trip");
   } else {
     console.log("unknown route type! " + uri);
   }
@@ -104,7 +93,6 @@ async function getRoutes() {
   }
   if (rows.length) {
     rows.map((row) => {
-      //create JSON object for each row
       const uuid = uuidv4();
       routes.push({
         name: row[0],
@@ -118,12 +106,12 @@ async function getRoutes() {
         comments: row[8],
         guid: uuid,
       });
+      //if there is a route, get it. Pause  with some random values as not to exhaust network on cheap hosting
       if (row[6]) {
         setTimeout(() => {
           getRouteGPX(row[6], uuid);
         }, Math.floor(Math.random() * 5000));
       }
-      //console.log(routes)
     });
   } else {
     console.log("No data found.");
@@ -131,9 +119,16 @@ async function getRoutes() {
   return routes;
 }
 
-const writeManifest = async () => {
-  r = await getRoutes();
+//store refresh token on disk
+//use strava.oauth.refreshToken(code) to update access token
+//store refresh token incase it changed
+//update access token
+//strava = new stravaApi.client(access_token);
 
+const writeManifest = async () => {
+  //call fuction to update strava access token
+  const r = await getRoutes();
+  
   fs.writeFile("./manifest.json", JSON.stringify(r), (err) => {
     if (err) {
       console.error(err);
@@ -141,4 +136,5 @@ const writeManifest = async () => {
     console.log("Wrote manifest successfully.");
   });
 };
+
 writeManifest();

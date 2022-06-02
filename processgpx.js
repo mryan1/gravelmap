@@ -7,7 +7,13 @@ const gpxDir = "./gpx/";
 
 
 //TODO: check that manifest exists
+try{
 const manifest = JSON.parse(fs.readFileSync("manifest.json"));
+}
+catch{
+  console.log("Manifest doesn't exist so making one.")
+  fs.writeFile("./manifest.json", '{}')
+};
 
 const xmlToDom = (gpxFileName) => {
   //TODO: handle malformed gpx files

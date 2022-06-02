@@ -26,12 +26,16 @@ const fetchRidewithgps = async (uri, uuid, type) => {
   }
   https.get(sanURI, (res) => {
     const path = "./gpx/" + uuid + ".gpx";
-    const filePath = fs.createWriteStream(path);
-    console.log("Writing ridewithgps " + type + ": " + path);
-    res.pipe(filePath);
-    filePath.on("finish", () => {
-      filePath.close();
-    });
+    try {
+      const filePath = fs.createWriteStream(path);
+      console.log("Writing ridewithgps " + type + ": " + path);
+      res.pipe(filePath);
+      filePath.on("finish", () => {
+        filePath.close();
+      });
+    } catch (err) {
+      console.log("Error writing " + path + ". " + err);
+    }
   });
 };
 
@@ -128,7 +132,7 @@ async function getRoutes() {
 const writeManifest = async () => {
   //call fuction to update strava access token
   const r = await getRoutes();
-  
+
   fs.writeFile("./manifest.json", JSON.stringify(r), (err) => {
     if (err) {
       console.error(err);

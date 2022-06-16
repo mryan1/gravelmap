@@ -6,13 +6,16 @@ const { resolve } = require("path");
 const gpxDir = "./gpx/";
 
 
-//TODO: check that manifest exists
+var manifest = '{}'
 try{
-const manifest = JSON.parse(fs.readFileSync("manifest.json"));
+manifest = JSON.parse(fs.readFileSync("manifest.json"));
 }
 catch{
   console.log("Manifest doesn't exist so making one.")
-  fs.writeFile("./manifest.json", '{}')
+  fs.writeFile("./manifest.json", manifest, (err) => {
+  if (err)
+    console.log(err);
+  })
 };
 
 const xmlToDom = (gpxFileName) => {
@@ -60,4 +63,4 @@ const writeGeojson = (tracks) => {
   });
 };
 
-processManifest();
+module.exports = { processManifest };

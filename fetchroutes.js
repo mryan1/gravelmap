@@ -141,4 +141,4 @@ const writeManifest = async () => {
   });
 };
 
-writeManifest();
+module.exports = { writeManifest };

@@ -8,7 +8,7 @@ let config = {
 // magnification with which the map will start
 const zoom = 5;
 // co-ordinates
-const lat = 53.5461;
+const lat = 52.5461;
 const lng = -113.4938;
 
 // calling map

@@ -3,20 +3,26 @@ const fs = require("fs");
 const path = require("path");
 const xmldom = require("@xmldom/xmldom");
 const { resolve } = require("path");
+const { features } = require("process");
 const gpxDir = "./gpx/";
 
+const createManifest = () => {
+  var manifest = '{}'
+  try{
+    manifest = JSON.parse(fs.readFileSync("manifest.json"));
+    return manifest
+    }
+    catch{
+      console.log("Manifest doesn't exist so making one.")
+      fs.writeFile("./manifest.json", manifest, (err) => {
+      if (err)
+        console.log(err);
+      })
+      return manifest
+    };
 
-var manifest = '{}'
-try{
-manifest = JSON.parse(fs.readFileSync("manifest.json"));
 }
-catch{
-  console.log("Manifest doesn't exist so making one.")
-  fs.writeFile("./manifest.json", manifest, (err) => {
-  if (err)
-    console.log(err);
-  })
-};
+
 
 const xmlToDom = (gpxFileName) => {
   //TODO: handle malformed gpx files
@@ -34,6 +40,7 @@ const xmlToDom = (gpxFileName) => {
 };
 
 const processManifest = async () => {
+  manifest = createManifest();
   const tracks = { type: "FeatureCollection", features: [] };
   manifest.map((m) => {
     const gpxFileName = gpxDir + m.guid + ".gpx";
@@ -49,9 +56,11 @@ const processManifest = async () => {
         console.log("Couldn't convert " + gpxFileName + " to JSON");
       }
     }
-    //TODO: add feature property like:  "popupContent":"This is the pop-up."
+    else{
+      console.log("Failed to convert gpx to Dom")
+    };
   });
-  await writeGeojson(tracks);
+  await writeGeojson(JSON.stringify(tracks));
 };
 
 const writeGeojson = (tracks) => {

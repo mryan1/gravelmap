@@ -14,10 +14,6 @@ const lng = -113.4938;
 // calling map
 const map = L.map("map", config).setView([lat, lng], zoom);
 
-// Used to load and display tile layers on the map
-// Most tile servers require attribution, which you can set under `Layer`
-//https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
-//https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}
 L.tileLayer(
   "https://api.mapbox.com/styles/v1/mryan21/cl3tm406v000g14o323u83bzf/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibXJ5YW4yMSIsImEiOiJjbDN0bTZlY3MwMGVtM2twZXI3a2FieTk5In0.FAQ3PX9gsptcQ-fITDWB7g",
   {
@@ -54,7 +50,6 @@ function style(feature) {
 }
 
 //TODO: add error handling
-//TODO: Show details when trail is clicked
 fetch("/trails")
   .then((response) => response.json())
   .then((trails) =>
@@ -64,6 +59,3 @@ fetch("/trails")
     }).addTo(map)
   );
 
-console.log("Trails:");
-console.log(L);
-//L.geoJSON().getFeature()

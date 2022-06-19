@@ -20,6 +20,7 @@ app.get("/trails", (request, response) => {
     path.resolve(__dirname, "./geojson/geojson.json")
   );
   let trails = JSON.parse(rawdata);
+  response.set('Cache-control', 'public, max-age=21600')
   response.send(trails);
 });
 

@@ -2,44 +2,62 @@
 <!-- served from your routes in server.js -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="Alberta Gravel" content="width=device-width, initial-scale=1" />
-    <meta name="Map of alberta gravel cycling routes" content="Map" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
-      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
-      crossorigin=""
-    />
-    <!-- Make sure you put this AFTER Leaflet's CSS -->
-    <script
-      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
-      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
-      crossorigin=""
-    ></script>
-    <title>Alberta Gravel Cycling Routes</title>
 
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="Alberta Gravel" content="width=device-width, initial-scale=1" />
+  <meta name="Map of alberta gravel cycling routes" content="Map" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin="" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
-    <!-- import the webpage's client-side javascript file -->
-    <script src="/script.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <h1>Alberta Gravel Cycling Routes</h1>
-    </header>
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+  <title>Alberta Gravel Cycling Routes</title>
 
-    <main>
-      <!-- This is the start of content for our page -->
-      <div id="map">
-        <script src="script.js"></script>
+  <!-- import the webpage's stylesheet -->
+  <link rel="stylesheet" href="/style.css" />
+
+  <!-- import the webpage's client-side javascript file -->
+  <script src="/script.js" defer></script>
+
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <div class="container-fluid boarder">
+    <h1 class="display-2 text-center mb-4">Alberta Gravel Cycling Routes</h1>
+  </div>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-2 col-lg-2 mx-2 .bg-light text-black">
+          <div class="row my-4 bg-light.bg-gradient">
+            <p class="card-test mb-3 text-muted">
+             <em> Colors are to distinguish one route from another.</em>
+            </p>
+            <p class="card-test mb-3 text-muted">
+              <em> Click on a route to see details and a link to the original route. </em>
+            </p>
+          </div>
+        </div>
+        <div id="map" class="col  border rounded">
+          <script src="script.js"></script>
+        </div>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <footer>Data gathered from <a href="https://www.facebook.com/groups/albertagravelcycling/permalink/2768050476836434">Alberta Gravel Facebook group</a></footer>
+  <footer class="py-2 my-2 mb-4 border-top"> Data gathered from <a
+      href="https://www.facebook.com/groups/albertagravelcycling/permalink/2768050476836434">Alberta Gravel Facebook
+      group</a></footer>
 
-  </body>
+</body>
+
 </html>

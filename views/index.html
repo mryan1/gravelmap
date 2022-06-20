@@ -19,10 +19,10 @@
     crossorigin=""></script>
   <title>Alberta Gravel Cycling Routes</title>
 
-  <!-- import the webpage's stylesheet -->
-  <link rel="stylesheet" href="/style.css" />
 
-  <!-- import the webpage's client-side javascript file -->
+  <style>
+    #map {height: 100vh;}
+  </style>
   <script src="/script.js" defer></script>
 
 </head>
@@ -37,17 +37,17 @@
   <main>
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-2 col-lg-2 mx-2 .bg-light text-black">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-2 mx-2 .bg-light text-black">
           <div class="row my-4 bg-light.bg-gradient">
             <p class="card-test mb-3 text-muted">
-             <em> Colors are to distinguish one route from another.</em>
+              <em> Colors are to distinguish one route from another.</em>
             </p>
             <p class="card-test mb-3 text-muted">
               <em> Click on a route to see details and a link to the original route. </em>
             </p>
           </div>
         </div>
-        <div id="map" class="col  border rounded">
+        <div id="map" class="col-12 col-lg-9 border rounded">
           <script src="script.js"></script>
         </div>
       </div>

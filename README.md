@@ -1,3 +1,3 @@
 # gravel.markryan.ca
 
-My attempt to lean node.js
+My attempt to learn node.js

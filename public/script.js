@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+var showDifficulty = false;
 
 let config = {
   minZoom: 6,
@@ -26,7 +27,7 @@ function onEachFeature(feature, layer) {
   }
 }
 
-function getColor() {
+function getRandomColor() {
   const colors = [
     "#D35400",
     "#F1C40F",
@@ -37,22 +38,67 @@ function getColor() {
   ];
   return colors[Math.floor(Math.random() * colors.length)];
 }
+function getDifficultyColor(difficulty) {
+  switch (difficulty) {
+    case 1 || 2:
+      return "#03fc0b";
+      break;
+    case 3 || 4: 
+      return "#f2f558";
+    case 5 || 6: 
+      return "#f5ce58";
+    case 7 || 8:
+      return "#f58758";
+    case 9 || 10:
+      return "#f70505";
+    default:
+      return "#807b7a";
 
-function style(feature) {
-  return {
-    weight: 3,
-    opacity: 1,
-    color: getColor(),
-    fillOpacity: 0.5,
-  };
+  }
+
 }
 
-//TODO: add error handling
+function style(feature) {
+  d = parseInt(feature.properties.difficulty)
+  if (showDifficulty) {
+    return {
+      weight: 3,
+      opacity: 1,
+      color: getDifficultyColor(d),
+      fillOpacity: 0.5,
+    };
+  }
+  else {
+    return {
+      weight: 3,
+      opacity: 1,
+      color: getRandomColor(),
+      fillOpacity: 0.5,
+    };
+  }
+}
+
+trailLayer = L.geoJSON(null, {
+  onEachFeature: onEachFeature,
+  style: style,
+}).addTo(map)
+
 fetch("/trails")
   .then((response) => response.json())
-  .then((trails) =>
-    L.geoJSON(trails, {
-      onEachFeature: onEachFeature,
-      style: style,
-    }).addTo(map)
-  );
+  .then((trails) => {
+
+    trailLayer.addData(trails)
+    trailLayer.setStyle(style)
+  });
+
+  function updateRouteColors(){
+    if (showDifficulty){
+      showDifficulty = false;
+    }
+    else{
+      showDifficulty = true;
+    }
+
+    trailLayer.resetStyle();
+
+  };

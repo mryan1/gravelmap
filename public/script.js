@@ -58,7 +58,7 @@ function getDifficultyColor(difficulty) {
     case 9 || 10:
       return "#f70505";
     default:
-      return "#414245";
+      return "#807b7a";
 
   }
 

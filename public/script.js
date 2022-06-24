@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-var showDifficulty = true;
+var showDifficulty = false;
 
 // config map
 let config = {
@@ -97,4 +97,14 @@ fetch("/trails")
     trailLayer.setStyle(style)
   });
 
+  function updateRouteColors(){
+    if (showDifficulty){
+      showDifficulty = false;
+    }
+    else{
+      showDifficulty = true;
+    }
 
+    trailLayer.resetStyle();
+
+  };

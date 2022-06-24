@@ -40,11 +40,18 @@
         <div class="col-12 col-sm-12 col-md-12 col-lg-2 mx-2 .bg-light text-black">
           <div class="row my-4 bg-light.bg-gradient">
             <p class="card-test mb-3 text-muted">
-              <em> Colors are to distinguish one route from another.</em>
+              <em> Default colors are to distinguish one route from another.</em>
             </p>
             <p class="card-test mb-3 text-muted">
               <em> Click on a route to see details and a link to the original route. </em>
             </p>
+            <p class="card-test mb-3 text-muted">
+            <input class="form-check-input" type="checkbox" value="" id="colordifficulty" onchange="updateRouteColors()">
+            <strong> Color routes by difficulty. </strong>
+            </p>
+            <p class="card-test mb-2 text-muted">
+            <em>Grey routes do not have a difficulty rating.  Easy is green, medium is yellow or orange, hard is red.</em> 
+          </p>
           </div>
         </div>
         <div id="map" class="col-12 col-lg-9 border rounded">

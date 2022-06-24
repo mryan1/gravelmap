@@ -1,5 +1,3 @@
-<!-- This is a static file -->
-<!-- served from your routes in server.js -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +19,9 @@
 
 
   <style>
-    #map {height: 100vh;}
+    #map {
+      height: 100vh;
+    }
   </style>
   <script src="/script.js" defer></script>
 
@@ -54,17 +54,22 @@
           </p>
           </div>
         </div>
-        <div id="map" class="col-12 col-lg-9 border rounded">
-          <script src="script.js"></script>
-        </div>
       </div>
+    </main>
+
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="https://www.facebook.com/groups/albertagravelcycling/permalink/2768050476836434"
+            class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+            Alberta Gravel Facebook
+          </a>
+        </div>
+        <div class="row-md-4 d-flex align-items-end"></div>
+        <span class="mb-3 mb-md-0 text-muted justify-content-end">contact@albertagravel.com</span>
+
+      </footer>
     </div>
-  </main>
-
-  <footer class="py-2 my-2 mb-4 border-top"> Data gathered from <a
-      href="https://www.facebook.com/groups/albertagravelcycling/permalink/2768050476836434">Alberta Gravel Facebook
-      group</a></footer>
-
 </body>
 
 </html>

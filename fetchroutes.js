@@ -20,7 +20,7 @@ const params = {
 const fetchRidewithgps = async (uri, uuid, type) => {
   var sanURI;
   if (uri.includes("?")) {
-    sanURI = uri.substring(0, uri.indexOf("?") - 1) + ".gpx?sub_format=track";
+    sanURI = uri.substring(0, uri.indexOf("?")) + ".gpx?sub_format=track";
   } else {
     sanURI = uri + ".gpx?sub_format=track";
   }
@@ -98,6 +98,7 @@ async function getRoutes() {
   if (rows.length) {
     rows.map((row) => {
       const uuid = uuidv4();
+      //TODO: should only add routes to manifest that we know we can retrieve.  i.e don't add strava activity
       routes.push({
         name: row[0],
         location: row[1],

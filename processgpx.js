@@ -51,6 +51,7 @@ const processManifest = async () => {
         var converted = tj.gpx(gpx).features[0];
         converted.properties.popupContent = `<p> <b>${m.name}</b> <br /> Distance: ${m.distance}km <br /> Elevatoin: ${m.elevation}m <br /> Author: ${m.author}
         <br /> <a href="${m.routelink}" target="_blank" rel="noopener noreferrer">Route Link</a> <br /> Amenities: ${m.amenities} <br /> Comments: ${m.comments}</p>`;
+        converted.properties.difficulty = m.difficulty;
         tracks.features.push(converted);
       } catch {
         console.log("Couldn't convert " + gpxFileName + " to JSON");

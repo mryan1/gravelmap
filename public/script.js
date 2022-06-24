@@ -53,17 +53,17 @@ function style(feature) {
   };
 }
 
-//TODO: add error handling
-//TODO: Show details when trail is clicked
+trailLayer = L.geoJSON(null,{
+  onEachFeature: onEachFeature,
+  style: style,
+} ).addTo(map)
+
 fetch("/trails")
   .then((response) => response.json())
-  .then((trails) =>
-    L.geoJSON(trails, {
-      onEachFeature: onEachFeature,
-      style: style,
-    }).addTo(map)
-  );
+  .then((trails) => {
 
-console.log("Trails:");
-console.log(L);
-//L.geoJSON().getFeature()
+    trailLayer.addData(trails)
+    trailLayer.setStyle(style)
+  });
+
+

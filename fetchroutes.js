@@ -132,11 +132,21 @@ const refreshStravaToken = async () => {
   process.env.STRAVA_REFRESH_TOKEN = st["refresh_token"]
 };
 
-
+function deleteGpxFiles() {
+  let files = fs.readdirSync('./gpx/');
+  files.forEach(file => {
+    fs.unlink('./gpx/' + file, (err => {
+      if (err) console.log(err);
+      else {
+        console.log("\nDeleted file: " + file);
+      }
+    }));
+  });
+}
 
 const writeManifest = async () => {
-  //call fuction to update strava access token
-  const token = await refreshStravaToken();
+  await refreshStravaToken();
+  deleteGpxFiles();
   const r = await getRoutes();
 
   fs.writeFile("./manifest.json", JSON.stringify(r), (err) => {

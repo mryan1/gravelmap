@@ -6,21 +6,22 @@ require("dotenv").config();
 const https = require("https");
 const { resolve } = require("path");
 const { v4: uuidv4 } = require("uuid");
-const strava = require("strava-v3");
+const stravaApi = require("strava-v3");
 
 const params = {
   sheetId: "1XvJrmn89OD5V2_1ixNxIJJbd8xfAYiPKveGrQE6EC0c",
-  apikey: process.env.GOOGLEAPIKEY,
+  googleApikey: process.env.GOOGLEAPIKEY,
   sheets: [
     "Central Alberta!A:I",
     "Southern Alberta!A:I",
     "Northern Alberta!A:I",
   ],
+  stravaRefreshToken: process.env.STRAVA_REFRESH_TOKEN,
 };
 const fetchRidewithgps = async (uri, uuid, type) => {
   var sanURI;
   if (uri.includes("?")) {
-    sanURI = uri.substring(0, uri.indexOf("?") - 1) + ".gpx?sub_format=track";
+    sanURI = uri.substring(0, uri.indexOf("?")) + ".gpx?sub_format=track";
   } else {
     sanURI = uri + ".gpx?sub_format=track";
   }
@@ -40,6 +41,7 @@ const fetchRidewithgps = async (uri, uuid, type) => {
 };
 
 const fetchStravaRoute = async (uuid, routeId) => {
+  const strava = new stravaApi.client(process.env.STRAVA_ACCESS_TOKEN);
   const sr = await strava.routes.getFile(
     { id: routeId, file_type: "gpx" },
     (error, data, response) => {
@@ -62,7 +64,6 @@ const getRouteGPX = (uri, uuid) => {
   if (uri.includes("ridewithgps.com/routes")) {
     fetchRidewithgps(uri, uuid, "route");
   } else if (uri.includes("strava.com/routes")) {
-    //TODO: figure out how to deal with token expiry
     const regex = /https:\/\/www\.strava\.com\/routes\/(\d+)/;
     const routeId = uri.match(regex)[1];
     fetchStravaRoute(uuid, routeId);
@@ -76,7 +77,7 @@ const getRouteGPX = (uri, uuid) => {
 };
 
 async function getSheet(s) {
-  const sheets = google.sheets({ version: "v4", auth: params.apikey });
+  const sheets = google.sheets({ version: "v4", auth: params.googleApikey });
   console.log("Downloading " + s);
   try {
     var res = await sheets.spreadsheets.values.get({
@@ -98,6 +99,7 @@ async function getRoutes() {
   if (rows.length) {
     rows.map((row) => {
       const uuid = uuidv4();
+      //TODO: should only add routes to manifest that we know we can retrieve.  i.e don't add strava activity
       routes.push({
         name: row[0],
         location: row[1],
@@ -123,14 +125,18 @@ async function getRoutes() {
   return routes;
 }
 
-//store refresh token on disk
-//use strava.oauth.refreshToken(code) to update access token
-//store refresh token incase it changed
-//update access token
-//strava = new stravaApi.client(access_token);
+const refreshStravaToken = async () => {
+  var util = require('util');
+  const st = await stravaApi.oauth.refreshToken(params.stravaRefreshToken);
+  process.env.STRAVA_ACCESS_TOKEN = st["access_token"]
+  process.env.STRAVA_REFRESH_TOKEN = st["refresh_token"]
+};
+
+
 
 const writeManifest = async () => {
   //call fuction to update strava access token
+  const token = await refreshStravaToken();
   const r = await getRoutes();
 
   fs.writeFile("./manifest.json", JSON.stringify(r), (err) => {

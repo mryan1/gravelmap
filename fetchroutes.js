@@ -17,6 +17,7 @@ const params = {
     "Northern Alberta!A:I",
   ],
   stravaRefreshToken: process.env.STRAVA_REFRESH_TOKEN,
+  gpxDir:  './gpx/'
 };
 const fetchRidewithgps = async (uri, uuid, type) => {
   var sanURI;
@@ -26,7 +27,7 @@ const fetchRidewithgps = async (uri, uuid, type) => {
     sanURI = uri + ".gpx?sub_format=track";
   }
   https.get(sanURI, (res) => {
-    const path = "./gpx/" + uuid + ".gpx";
+    const path = params.gpxDir + uuid + ".gpx";
     try {
       const filePath = fs.createWriteStream(path);
       console.log("Writing ridewithgps " + type + ": " + path);
@@ -45,7 +46,7 @@ const fetchStravaRoute = async (uuid, routeId) => {
   const sr = await strava.routes.getFile(
     { id: routeId, file_type: "gpx" },
     (error, data, response) => {
-      const path = "./gpx/" + uuid + ".gpx";
+      const path = params.gpxDir + uuid + ".gpx";
       console.log("Writing strava gpx: " + path + " for route id " + routeId);
       if (error) {
         console.error("Error fetching Strava route: " + error);
@@ -132,11 +133,21 @@ const refreshStravaToken = async () => {
   process.env.STRAVA_REFRESH_TOKEN = st["refresh_token"]
 };
 
-
+function deleteGpxFiles() {
+  let files = fs.readdirSync(params.gpxDir);
+  files.forEach(file => {
+    fs.unlink(params.gpxDir + file, (err => {
+      if (err) console.log(err);
+      else {
+        console.log("\nDeleted file: " + file);
+      }
+    }));
+  });
+}
 
 const writeManifest = async () => {
-  //call fuction to update strava access token
-  const token = await refreshStravaToken();
+  await refreshStravaToken();
+  deleteGpxFiles();
   const r = await getRoutes();
 
   fs.writeFile("./manifest.json", JSON.stringify(r), (err) => {

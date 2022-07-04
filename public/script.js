@@ -40,17 +40,26 @@ function getRandomColor() {
 }
 function getDifficultyColor(difficulty) {
   switch (difficulty) {
-    case 1 || 2:
-      return "#03fc0b";
-      break;
-    case 3 || 4: 
-      return "#f2f558";
-    case 5 || 6: 
-      return "#f5ce58";
-    case 7 || 8:
-      return "#f58758";
-    case 9 || 10:
-      return "#f70505";
+    case 1:
+      return "#00ff11";
+    case 2:
+      return "#94f56e";
+    case 3:
+      return "#c6ff5c";
+    case 4:
+      return "#f1ff5c";
+    case 5:
+      return "#ffe95c";
+    case 6:
+        return "#ffd45c";
+    case 7:
+      return "#ffb65c";
+    case 8:
+        return "#ff6f1c";
+    case 9:
+      return "#ff410d";
+    case 10:
+        return "#ff0d0d";
     default:
       return "#807b7a";
 
@@ -91,14 +100,14 @@ fetch("/trails")
     trailLayer.setStyle(style)
   });
 
-  function updateRouteColors(){
-    if (showDifficulty){
-      showDifficulty = false;
-    }
-    else{
-      showDifficulty = true;
-    }
+function updateRouteColors() {
+  if (showDifficulty) {
+    showDifficulty = false;
+  }
+  else {
+    showDifficulty = true;
+  }
 
-    trailLayer.resetStyle();
+  trailLayer.resetStyle();
 
-  };
+};

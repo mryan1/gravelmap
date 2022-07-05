@@ -28,21 +28,21 @@ jobs:
         name: Push to docker registry
         run: docker push mryan21/gravelmap:staging
 
-  deploy:
+  # deploy:
 
-    runs-on: ubuntu-latest
+  #   runs-on: ubuntu-latest
 
-    steps:
-    - name: Deploy to Docker 
-      uses: wshihadeh/docker-deployment-action@v1
-      with:
-        remote_docker_host: civo@212.2.244.229
-        ssh_private_key: ${{ secrets.CIVO_SSH_PRIVATE_KEY }}
-        ssh_public_key: ${{ secrets.CIVO_SSH_PUBLIC_KEY }}
-        deployment_mode: docker-compose
-        deploy_path: /home/civo/gravel-staging
-        stack_file_name: docker-compose.yaml
-        keep_files: 5
-        pull_images_first: true
-        args: up -d
-        pre_deployment_command_args: sudo su
+  #   steps:
+  #   - name: Deploy to Docker 
+  #     uses: wshihadeh/docker-deployment-action@v1
+  #     with:
+  #       remote_docker_host: civo@212.2.244.229
+  #       ssh_private_key: ${{ secrets.CIVO_SSH_PRIVATE_KEY }}
+  #       ssh_public_key: ${{ secrets.CIVO_SSH_PUBLIC_KEY }}
+  #       deployment_mode: docker-compose
+  #       deploy_path: /home/civo/gravel-staging
+  #       stack_file_name: docker-compose.yaml
+  #       keep_files: 5
+  #       pull_images_first: true
+  #       args: up -d
+  #       pre_deployment_command_args: sudo su

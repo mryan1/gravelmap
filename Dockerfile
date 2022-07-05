@@ -3,6 +3,6 @@ FROM node:18-alpine3.14
 WORKDIR /app
 COPY . .
 RUN chmod -R 777 /app
-RUN node install --production
+RUN npm install --production
 CMD ["node", "server.js"]
 EXPOSE 80

@@ -2,9 +2,9 @@ name: Staging Docker Image CI
 
 on:
   push:
-    branches: [ "staging" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "staging" ]
+    branches: [ "main" ]
 
 jobs:
 
@@ -23,7 +23,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - 
         name: Build the Docker image
-        run: docker build . --file Dockerfile --tag mryan21/gravelmap:staging
+        run: docker build . --file Dockerfile --tag mryan21/gravelmap:latest
       -
         name: Push to docker registry
-        run: docker push mryan21/gravelmap:staging
+        run: docker push mryan21/gravelmap:latest

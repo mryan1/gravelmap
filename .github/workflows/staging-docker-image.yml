@@ -45,4 +45,4 @@ jobs:
         keep_files: 5
         pull_images_first: true
         args: up -d
- 
+        pre_deployment_command_args: sudo su

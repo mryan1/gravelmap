@@ -44,4 +44,5 @@ jobs:
         stack_file_name: docker-compose.yaml
         keep_files: 5
         pull_images_first: true
+        args: up -d
  
